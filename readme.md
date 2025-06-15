@@ -92,7 +92,7 @@ Example
 huggingface-cli upload model/fine-tuned_Ministral-8B-custom-dataset 
 ---
 
-## Sample Fine Tuned Model
+## Sample Fine-Tuned Model
 https://huggingface.co/Somasish01/fine-tuned-ministral-8b-custom-data
 
 ### About `data_create.py`
