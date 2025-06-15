@@ -1,0 +1,5 @@
+pip install huggingface-hub transformers numpy mlx
+pip install mlx-lm --no-dependencies
+pandas
+huggingface_hub
+jinja2
