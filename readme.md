@@ -101,3 +101,35 @@ This script prepares and splits your dataset for fine-tuning. It loads a CSV of 
 ---
 
 For more details, see comments in `data_create.py`.
+
+## Parameter Explanations
+
+### Training (`mlx_lm.lora`)
+- `--model`: Path or Hugging Face ID of the base model to fine-tune.
+- `--data`: Directory containing `train.jsonl`, `test.jsonl`, and `valid.jsonl` files.
+- `--train`: Flag to enable training mode.
+- `--fine-tune-type`: Type of fine-tuning; `lora` uses Low-Rank Adaptation for efficient training.
+- `--batch-size`: Number of samples processed in each training batch.
+- `--num-layers`: Number of model layers to fine-tune (higher values may require more memory).
+- `--iters`: Number of training iterations (steps).
+- `--adapter-path`: Directory to save the LoRA adapter weights after training.
+
+### Testing (`mlx_lm.lora` with `--test`)
+- `--model`: Path or Hugging Face ID of the base model.
+- `--adapter-path`: Path to the trained LoRA adapters.
+- `--data`: Directory containing the test data (`test.jsonl`).
+- `--batch-size`: Number of samples processed in each test batch.
+- `--test`: Flag to enable test mode (evaluates the model on the test set).
+
+### Save the Fine-Tuned Model (`mlx_lm.fuse`)
+- `--model`: Path or Hugging Face ID of the base model.
+- `--adapter-path`: Path to the trained LoRA adapters.
+- `--save-path`: Output directory to save the fully fused, fine-tuned model.
+
+### Test the Saved Model (`mlx_lm.generate`)
+- `--model`: Path to the saved, fine-tuned model.
+- `--max-tokens`: Maximum number of tokens to generate in the output.
+- `--prompt`: Input prompt for the model to generate a response.
+- `--adapter-path` (optional): Path to adapters if using LoRA adapters (not needed if using fused model).
+
+---
