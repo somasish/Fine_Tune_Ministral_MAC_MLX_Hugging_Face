@@ -67,7 +67,7 @@ python -m mlx_lm.generate \
     --model mlx-community/Ministral-8B-Instruct-2410-4bit \
     --max-tokens 500 \
     --adapter-path adapters \
-    --prompt "Symptoms: I have been experiencing memory loss, stiffness and difficulty walking. Question: What could be the diagnosis I have?"
+    --prompt "Symptoms: I have been experiencing extremely tired, have dark urine, yellowing of my eyes and skin, and abdominal pain. Question: What could be the diagnosis I have?"
 ```
 
 ## Save the Fine-Tuned Model
@@ -83,7 +83,7 @@ python -m mlx_lm.fuse \
 python -m mlx_lm.generate \
     --model model/fine-tuned_Ministral-8B-custom-dataset \
     --max-tokens 500 \
-    --prompt "Symptoms: I have been experiencing memory loss, stiffness and difficulty walking. Question: What could be the diagnosis I have?"
+    --prompt "Symptoms: I have been experiencing extremely tired, have dark urine, yellowing of my eyes and skin, and abdominal pain. Question: What could be the diagnosis I have?"
 ```
 
 ## Upload to Hugging Face
