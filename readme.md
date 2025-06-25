@@ -88,8 +88,11 @@ python -m mlx_lm.generate \
 
 ## Upload to Hugging Face
 Follow Hugging Face documentation to upload your fine-tuned model.
-Example
+
+Example 
+```sh
 huggingface-cli upload model/fine-tuned_Ministral-8B-custom-dataset 
+```
 ---
 
 ## Sample Fine-Tuned Model
